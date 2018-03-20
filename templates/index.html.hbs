@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
   <head>
-    <title>Presentation Manager</title>
+    <title>Presentation Manager - deralex' edition</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/css/uikit.min.css" />
-    <script src="/js/uikit.min.js"></script>
-    <script src="/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="static/css/uikit.min.css" />
+    <script src="static/js/uikit.min.js"></script>
+    <script src="static/js/uikit-icons.min.js"></script>
   </head>
-  <body>
+  <body style="background-color: #44484C">
     <div class="uk-section uk-height-viewport">
       <nav class="uk-navbar uk-navbar-container uk-navbar-transparent uk-position-top">
         <div class="uk-navbar-right">
@@ -30,8 +30,9 @@
             <div class="uk-card uk-card-body uk-card-default uk-card-small uk-position-center">
               <form id="slides" action="/presentation" method="POST">
                 <fieldset class="uk-fieldset">
-                  <legend class="uk-legend">Presentation</legend>
-		  <label for="presentation" class="uk-form-label">Choose</label><br>
+                  <legend class="uk-legend">deralex Slides - 2018</legend>
+                  <br />
+                  <label for="presentation" class="uk-form-label">Choose</label><br />
                   <select name="slide_id" class="uk-select">
                       {{ #each slides }}
                           <option value="{{ id }}">{{ title }}</option>

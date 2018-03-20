@@ -29,7 +29,7 @@ fn index() -> Template {
     Template::render("index", &slides)
 }
 
-#[get("/<file..>")]
+#[get("/static/<file..>")]
 fn files(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/").join(file)).ok()
 }
@@ -48,8 +48,21 @@ fn presentation(slide: Form<Slide>) -> Template {
     Template::render("presentation", &slides)
 }
 
+#[get("/slide/<id>")]
+fn slide(id: usize) -> Template {
+    let s = list_slides();
+    let slide_id = id - 1;
+    let slide = &s[slide_id];
+    let mut slides = HashMap::new();
+    slides.insert("title", &slide.title);
+    slides.insert("description", &slide.description);
+    slides.insert("style", &slide.style);
+    slides.insert("file", &slide.file);
+    Template::render("presentation", &slides)
+}
+
 fn rocket() -> rocket::Rocket {
-    rocket::ignite().mount("/", routes![index, files, presentation])
+    rocket::ignite().mount("/", routes![index, presentation, slide, files])
     .attach(Template::fairing())
 }
 
