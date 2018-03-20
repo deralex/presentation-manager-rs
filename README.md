@@ -40,7 +40,7 @@ cargo build
 
 before starting slideman.
 
-*Important!*: You need the `nightly` builds of Rust!
+**Important!**: You need the `nightly` builds of Rust!
 
 If you're using `rustup`, just execute the following commands:
 ```
