@@ -1,4 +1,4 @@
-# slideman - a manager for reaveal.js slides, written in Rust
+# slideman - a manager for reveal.js slides, written in Rust
 
 ## How does it work?
 
