@@ -1,4 +1,4 @@
-# presentation-manager-rs - A manager for HTML5 presentations, written in Rust
+# slideman - a manager for reaveal.js slides, written in Rust
 
 ## How does it work?
 
@@ -16,6 +16,10 @@ is the file that contains the list of your presentations.
 - `description` - A short description of your presentations' content
 - `style` - The name of the theme file
 
+## Author
+
+Alexander Kluth <deralex@cpan.org>, 2018. Licensed under MIT.
+
 ## Credits
 
-Developed by Mario Garcia (mattdark), (c) 2018.
+Based on [presentation-manager-rs](https://github.com/mattdark/presentation-manager-rs) developed by Mario Garcia (mattdark), (c) 2018.

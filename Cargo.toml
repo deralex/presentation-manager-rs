@@ -20,5 +20,5 @@ name = "mylib"
 path = "src/lib.rs"
 
 [[bin]]
-name = "presman"
+name = "slideman"
 path = "src/main.rs"
